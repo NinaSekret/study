@@ -27,10 +27,42 @@
         return result;
     }
 
+    // Рекурсия
+    function sumTo(x) {
+        if (x !== 1) {
+            return x + sumTo(x - 1);
+        }
+        return 1;
+    }
+
+    function factorial(x) {
+        if (x !== 1) {
+            return x *= factorial(x - 1);
+        }
+        return x;
+    }
+
+    function fib(x) {
+        let a = 1;
+        let b = 1;
+        let c;
+
+        for (let i = 3; i <= x; i++) {
+            c = a + b;
+            a = b;
+            b = c;
+        }
+
+        return b;
+    }
+
     window.functions = {
         checkAge1: checkAge1,
         checkAge2: checkAge2,
         checkMinOfTwo: checkMinOfTwo,
-        pow: pow
+        pow: pow,
+        sumTo: sumTo,
+        factorial: factorial,
+        fib: fib
     };
 })();
