@@ -49,4 +49,7 @@
 
     console.log('Умножить численные значения объекта на 2:');
     console.log(objects.multiplyNumeric(menu));
+    thisWord.calc.read();
+
+    thisWord.ladder.up().up().down().up().down().showStep();
 })();
