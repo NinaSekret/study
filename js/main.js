@@ -52,4 +52,21 @@
     thisWord.calc.read();
 
     thisWord.ladder.up().up().down().up().down().showStep();
+
+    console.log('\n========Closures===========');
+    console.log(`Sum: ${closure.sum(2)(4)}`);
+
+    let arr = [1, 2, 3, 4, 5, 6, 7];
+
+    console.log(arr.filter(closure.inBetween(3, 6)));
+    console.log(arr.filter(closure.inArray([1, 2, 10])));
+
+    let users = [
+        { name: "John", age: 20, surname: "Johnson" },
+        { name: "Pete", age: 18, surname: "Peterson" },
+        { name: "Ann", age: 19, surname: "Hathaway" }
+    ];
+
+    console.log(users.sort(closure.byField('name')));
+    console.log(users.sort(closure.byField('age')));
 })();
