@@ -69,4 +69,15 @@
 
     console.log(users.sort(closure.byField('name')));
     console.log(users.sort(closure.byField('age')));
+
+    const fruits = ["Яблоко", "Апельсин", "Груша", "Лимон"];
+    console.log(`Random fruits array element: ${arrays.getRandomArrEl(fruits)}`);
+
+    const findArr = ["test", 2, 1.5, false];
+    console.log(`Search for element index in array: ${arrays.find(findArr, 1.5)}`);
+
+    const filterArr = [5, 4, 3, 8, 0];
+    console.log(`Filter array: ${arrays.filterRange(filterArr, 3, 5)}`);
+
+    console.log(`Решето Эратосфена: ${arrays.sumSimpleNumbers(100)}`);
 })();
